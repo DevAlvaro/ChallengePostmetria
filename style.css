@@ -1,0 +1,22 @@
+body {
+    padding: 20px;
+}
+
+.cardAvatar {
+    float: left;
+}
+
+.cardAvatar img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.list-group-item * {
+    float: left;
+    margin-right: 10px;
+}
+
+.cardProfile {
+    display: flex;
+    justify-content: center;
+}

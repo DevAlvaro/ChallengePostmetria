@@ -14,7 +14,8 @@ while ($row = mysqli_fetch_assoc($result)) {
         $row['followers'] . "|" .
         $row['following'] . "|" .
         $row['repos'] . "|" .
-        $row['created'] . "|";
+        $row['created'] . "|" .
+        $row['bio'] . "|";
 }
 
 exit;
