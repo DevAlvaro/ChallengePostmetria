@@ -10,10 +10,11 @@ $following = $objResult['following'];
 $repos = $objResult['public_repos'];
 $created = $objResult['created_at'];
 $bio = $objResult['bio'];
+$name = $objResult['name'];
 
 $stringDate = serialize($created);
 $date =  explode('"', (explode("T", $stringDate))[0]);
 
-$sql = "insert into users values ('$login', '$avatar', '$url', '$followers', '$following', '$repos', '$date[1]', '$bio')";
+$sql = "insert into users values ('$login', '$name', '$bio', '$avatar', '$url', '$repos', '$followers', '$following', '$date[1]')";
 $result = mysqli_query($connection, $sql);
 exit;

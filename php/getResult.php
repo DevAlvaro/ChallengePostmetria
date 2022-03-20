@@ -8,14 +8,15 @@ $row = mysqli_num_rows($result);
 
 
 while ($row = mysqli_fetch_assoc($result)) {
-    echo $row['login'] . "|" .
+    echo $row['name'] . "|" .
+        $row['login'] . "|" .
         $row['avatar'] . "|" .
-        $row['url'] . "|" .
+        $row['bio'] . "|" .
+        $row['created'] . "|" .
+        $row['repos'] . "|" .
         $row['followers'] . "|" .
         $row['following'] . "|" .
-        $row['repos'] . "|" .
-        $row['created'] . "|" .
-        $row['bio'] . "|";
+        $row['url'] . "|";
 }
 
 exit;
