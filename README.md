@@ -1,7 +1,7 @@
 # Postmetria Challenge 
 
 ## Description
-This project consists in web application who allows you to get some basic infos searching by a Github usernames. It was made using Vue in front and with PHP, JS, Jquery, AJAX in back and MySQL database.
+This project consists in web application who allows you to get some basic infos searching by a Github usernames. It was made using Vue in front, PHP, JS, jQuery, AJAX in back and MySQL database.
 
 ## How to install
 * Download and install XAMPP (includes MySQL, Apache and PHP)
