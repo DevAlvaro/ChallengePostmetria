@@ -1,30 +1,29 @@
-
 function saveResult(objResult) {
-    $.post('php/saveResult.php', { objResult }, function (result) { });
-    getResult(objResult.login, objResult);
-};
+  $.post("php/saveResult.php", { objResult }).always(() => {
+    getResult(objResult.login);
+  });
+}
 
 function getResult(login) {
-    $.post('php/getResult.php', { login }, function (result) {
-        console.log("Resultado: " + result);
-        updatePage(result);
-    });
-};
+  $.post("php/getResult.php", { login }, function (result) {
+    updatePage(result);
+  });
+}
 
 function updatePage(result) {
-    let values = result.split("|");
+  let values = result.split("|");
 
-    let name = values[0];
-    let login = values[1];
-    let avatar = values[2];
-    let bio = values[3];
-    let created = values[4];
-    let repos = values[5];
-    let followers = values[6];
-    let following = values[7];
-    let url = values[8];
+  let name = values[0];
+  let login = values[1];
+  let avatar = values[2];
+  let bio = values[3];
+  let created = values[4];
+  let repos = values[5];
+  let followers = values[6];
+  let following = values[7];
+  let url = values[8];
 
-    let html = `
+  let html = `
     <div class="card" style="width: 30rem;">
         <div class="card-body">
             <div class="cardAvatar">
@@ -63,7 +62,7 @@ function updatePage(result) {
             </form>
         </div>
     </div>
-    `
+    `;
 
-    $("#divResult").html(html);
+  $("#divResult").html(html);
 }
